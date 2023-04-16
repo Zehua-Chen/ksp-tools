@@ -9,6 +9,7 @@
 #define ksp_tools_h
 
 #include "burn_in.h"
+#include "duration.h"
 #include "result.h"
 
 #endif /* ksp_tools_h */
