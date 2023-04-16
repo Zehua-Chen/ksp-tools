@@ -12,6 +12,7 @@
 		67F4D88B29EBC45E007AEE3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F4D88A29EBC45E007AEE3B /* Assets.xcassets */; };
 		67F4D88E29EBC45E007AEE3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F4D88D29EBC45E007AEE3B /* Preview Assets.xcassets */; };
 		67F4D89B29EBCB11007AEE3B /* BurnIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F4D89A29EBCB11007AEE3B /* BurnIn.swift */; };
+		67F4D8A429EBD3D8007AEE3B /* burn_in.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67F4D8A229EBD3D8007AEE3B /* burn_in.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,11 @@
 		67F4D88D29EBC45E007AEE3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67F4D88F29EBC45E007AEE3B /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		67F4D89A29EBCB11007AEE3B /* BurnIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnIn.swift; sourceTree = "<group>"; };
+		67F4D8A129EBD3D8007AEE3B /* macOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "macOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		67F4D8A229EBD3D8007AEE3B /* burn_in.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = burn_in.cpp; path = ../shared/burn_in.cpp; sourceTree = "<group>"; };
+		67F4D8A329EBD3D8007AEE3B /* burn_in.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = burn_in.h; path = ../shared/burn_in.h; sourceTree = "<group>"; };
+		67F4D8A529EBD4CE007AEE3B /* result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = result.h; path = ../shared/result.h; sourceTree = "<group>"; };
+		67F4D8A629EBD52B007AEE3B /* ksp_tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ksp_tools.h; path = ../shared/ksp_tools.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 		67F4D87829EBC3B1007AEE3B = {
 			isa = PBXGroup;
 			children = (
+				67F4D89E29EBD3A4007AEE3B /* Shared */,
 				67F4D89929EBCB02007AEE3B /* Tools */,
 				67F4D88529EBC45D007AEE3B /* macOS */,
 				67F4D88429EBC45D007AEE3B /* Products */,
@@ -55,6 +62,7 @@
 		67F4D88529EBC45D007AEE3B /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				67F4D8A129EBD3D8007AEE3B /* macOS-Bridging-Header.h */,
 				67F4D88629EBC45D007AEE3B /* KSPToolsApp.swift */,
 				67F4D88829EBC45D007AEE3B /* WelcomeView.swift */,
 				67F4D88A29EBC45E007AEE3B /* Assets.xcassets */,
@@ -78,6 +86,17 @@
 				67F4D89A29EBCB11007AEE3B /* BurnIn.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		67F4D89E29EBD3A4007AEE3B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				67F4D8A229EBD3D8007AEE3B /* burn_in.cpp */,
+				67F4D8A329EBD3D8007AEE3B /* burn_in.h */,
+				67F4D8A529EBD4CE007AEE3B /* result.h */,
+				67F4D8A629EBD52B007AEE3B /* ksp_tools.h */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +131,7 @@
 				TargetAttributes = {
 					67F4D88229EBC45D007AEE3B = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -151,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F4D89B29EBCB11007AEE3B /* BurnIn.swift in Sources */,
+				67F4D8A429EBD3D8007AEE3B /* burn_in.cpp in Sources */,
 				67F4D88929EBC45D007AEE3B /* WelcomeView.swift in Sources */,
 				67F4D88729EBC45D007AEE3B /* KSPToolsApp.swift in Sources */,
 			);
@@ -248,6 +269,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "macOS/macOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -323,6 +345,7 @@
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "macOS/macOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};

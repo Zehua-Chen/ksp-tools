@@ -9,13 +9,13 @@ import SwiftUI
 
 struct BurnIn: View {
   @State
-  var minutesInput = ""
+  var minutesInput = "0"
 
   @State
   var minutesError: String? = nil
 
   @State
-  var secondsInput = ""
+  var secondsInput = "0"
 
   @State
   var secondsError: String? = nil
@@ -23,7 +23,7 @@ struct BurnIn: View {
   var body: some View {
     Form {
       Section("Information") {
-        Text("")
+        Text("This tool is intended to be used in KSP 1 only")
       }
 
       Section("Burn Window") {
@@ -74,11 +74,13 @@ struct BurnIn: View {
 
     guard let seconds = try? Float(secondsInput, format: .number) else { return invalidInput }
     guard let minutes = try? Float(minutesInput, format: .number) else { return invalidInput }
+    
+    var input = ksp_time_t(seconds: seconds, minutes: minutes)
+    var output = ksp_time_t()
+    
+    burn_in(&input, &output)
 
-    let totalSeconds = seconds + minutes * 60
-    let startBurnInSeconds = totalSeconds / 2.0
-
-    return "\(startBurnInSeconds) seconds"
+    return "\(output.minutes) minutes \(output.seconds) seconds"
   }
 }
 
