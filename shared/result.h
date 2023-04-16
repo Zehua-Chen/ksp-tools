@@ -8,9 +8,6 @@
 #ifndef result_h
 #define result_h
 
-typedef enum result {
-  result_ok
-} result_t;
-
+typedef enum ksp_tools_result { ksp_tools_result_ok } ksp_tools_result_t;
 
 #endif /* result_h */

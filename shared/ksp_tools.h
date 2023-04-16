@@ -8,7 +8,7 @@
 #ifndef ksp_tools_h
 #define ksp_tools_h
 
-#include "result.h"
 #include "burn_in.h"
+#include "result.h"
 
 #endif /* ksp_tools_h */

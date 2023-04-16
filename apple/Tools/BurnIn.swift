@@ -75,10 +75,10 @@ struct BurnIn: View {
     guard let seconds = try? Float(secondsInput, format: .number) else { return invalidInput }
     guard let minutes = try? Float(minutesInput, format: .number) else { return invalidInput }
     
-    var input = ksp_time_t(seconds: seconds, minutes: minutes)
-    var output = ksp_time_t()
+    var input = ksp_tools_duration(seconds: seconds, minutes: minutes)
+    var output = ksp_tools_duration()
     
-    burn_in(&input, &output)
+    ksp_tools_burn_in(&input, &output)
 
     return "\(output.minutes) minutes \(output.seconds) seconds"
   }

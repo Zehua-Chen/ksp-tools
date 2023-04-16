@@ -13,6 +13,7 @@
 		67F4D88E29EBC45E007AEE3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F4D88D29EBC45E007AEE3B /* Preview Assets.xcassets */; };
 		67F4D89B29EBCB11007AEE3B /* BurnIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F4D89A29EBCB11007AEE3B /* BurnIn.swift */; };
 		67F4D8A429EBD3D8007AEE3B /* burn_in.cc in Sources */ = {isa = PBXBuildFile; fileRef = 67F4D8A229EBD3D8007AEE3B /* burn_in.cc */; };
+		67F4D8A929EBDB3D007AEE3B /* duration.cc in Sources */ = {isa = PBXBuildFile; fileRef = 67F4D8A829EBDA7B007AEE3B /* duration.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		67F4D8A329EBD3D8007AEE3B /* burn_in.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = burn_in.h; path = ../shared/burn_in.h; sourceTree = "<group>"; };
 		67F4D8A529EBD4CE007AEE3B /* result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = result.h; path = ../shared/result.h; sourceTree = "<group>"; };
 		67F4D8A629EBD52B007AEE3B /* ksp_tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ksp_tools.h; path = ../shared/ksp_tools.h; sourceTree = "<group>"; };
+		67F4D8A729EBDA4C007AEE3B /* duration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = duration.h; path = ../shared/duration.h; sourceTree = "<group>"; };
+		67F4D8A829EBDA7B007AEE3B /* duration.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = duration.cc; path = ../shared/duration.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				67F4D8A329EBD3D8007AEE3B /* burn_in.h */,
 				67F4D8A529EBD4CE007AEE3B /* result.h */,
 				67F4D8A629EBD52B007AEE3B /* ksp_tools.h */,
+				67F4D8A729EBDA4C007AEE3B /* duration.h */,
+				67F4D8A829EBDA7B007AEE3B /* duration.cc */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F4D89B29EBCB11007AEE3B /* BurnIn.swift in Sources */,
+				67F4D8A929EBDB3D007AEE3B /* duration.cc in Sources */,
 				67F4D8A429EBD3D8007AEE3B /* burn_in.cc in Sources */,
 				67F4D88929EBC45D007AEE3B /* WelcomeView.swift in Sources */,
 				67F4D88729EBC45D007AEE3B /* KSPToolsApp.swift in Sources */,
