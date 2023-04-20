@@ -22,8 +22,12 @@ struct BurnIn: View {
 
   var body: some View {
     Form {
-      Section("Information") {
+      ToolTitle("Burn In Calculator")
+      
+      Section {
         Text("This tool is intended to be used in KSP 1 only")
+      } header: {
+        Text("Information")
       }
 
       Section("Burn Window") {
@@ -62,6 +66,7 @@ struct BurnIn: View {
     }
     .padding()
     .navigationSubtitle(Text("Burn In"))
+    .formStyle(.grouped)
   }
 
   func isValidNumber(input: String) -> Bool {
