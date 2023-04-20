@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  KSP Tools
+
+  Created by Zehua Chen on 4/20/23.
+  
+*/
+"Burn-In" = "电火时刻";
+"Information" = "信息";
+"Burn Window" = "点火窗口";
+"Start Burn In" = "点火时机";
