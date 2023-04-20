@@ -22,6 +22,6 @@ void seconds_to_duration(ksp_tools_duration_t *duration, float seconds) {
   assert(duration != nullptr);
 
   duration->minutes = std::floor(seconds / 60.0f);
-  duration->seconds = std::remainderf(seconds, 60.0f);
+  duration->seconds = std::fmodf(seconds, 60.0f);
 }
 }  // namespace ksp_tools
