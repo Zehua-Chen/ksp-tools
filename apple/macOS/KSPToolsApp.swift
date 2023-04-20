@@ -16,10 +16,10 @@ enum KSPTool: Hashable, Identifiable, CaseIterable {
     return self
   }
 
-  var title: String {
+  var title: LocalizedStringKey {
     switch self {
     case .burnIn:
-      return "Burn In"
+      return "Burn-In"
     }
   }
 }

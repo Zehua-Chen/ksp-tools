@@ -22,7 +22,7 @@ struct BurnIn: View {
 
   var body: some View {
     Form {
-      ToolTitle("Burn In Calculator")
+      ToolTitle("Burn-In Calculator")
       
       Section {
         Text("This tool is intended to be used in KSP 1 only")
@@ -65,7 +65,7 @@ struct BurnIn: View {
       }
     }
     .padding()
-    .navigationSubtitle(Text("Burn In"))
+    .navigationSubtitle(Text("Burn-In"))
     .formStyle(.grouped)
   }
 
